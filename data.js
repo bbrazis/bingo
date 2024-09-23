@@ -21,7 +21,7 @@ const options =
         19: "Going into the pool area",
         20: "Can I have ____ snack?",
         21: "among among us",
-        22: "I'm sonic fast",
+        22: "Can we see the kitty?",
         23: "Kid breakdown or tantrum",
         24: "Kid gets injured",
         25: "James runs off without notice"
