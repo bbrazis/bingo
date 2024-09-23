@@ -47,7 +47,7 @@ h1 {
     position: relative;
     font-size: clamp(.5rem, calc(.05rem + 2.1vw), 1.5rem);
     padding: .125em;
-    font-weight: 400;
+    font-weight: 600;
     outline-color: var(--focused);
 }
 
@@ -84,6 +84,7 @@ button {
 .reset-btn {
     margin: 1.5em auto 0;
     width: fit-content;
+    font-size: 1.25rem;
     background: var(--resetBtn);
     border: none;
     padding: .75em 1.5em;
