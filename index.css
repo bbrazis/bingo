@@ -45,7 +45,7 @@ h1 {
     align-items: center;
     background-color: var(--boxColor);
     position: relative;
-    font-size: clamp(.5rem, calc(.05rem + 2.1vw), 2rem);
+    font-size: clamp(.5rem, calc(.05rem + 2.1vw), 1.5rem);
     padding: .125em;
     font-weight: 400;
     outline-color: var(--focused);
