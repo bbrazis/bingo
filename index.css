@@ -1,0 +1,88 @@
+:root {
+    --background: #27292c;
+    --defaultTextColor: white;
+    --boxColor: hsl(from var(--background) h s 75);
+    --boxText: black;
+    --boxSelected: rgb(20, 255, 70);
+    
+    --resetBtn: rgb(100,255,100);
+    --focused: orange;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #27292c;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem
+}
+
+h1 {
+    margin: 0 0 1em;
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+    border: .125rem solid white;
+}
+
+.square {
+    aspect-ratio: 1;
+    border: .125rem solid white;
+    display: flex;
+    justify-content: center;
+    color: var(--boxText);
+    align-items: center;
+    background-color: var(--boxColor);
+    position: relative;
+    font-size: clamp(.5rem, calc(.05rem + 2.1vw), 2rem);
+    padding: .125em;
+    font-weight: 400;
+    outline-color: var(--focused);
+}
+
+.square:focus-within {
+    border-color: var(--focused);
+}
+
+.square.selected {
+    background-color: var(--boxSelected);
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.clickable {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+}
+
+.reset-btn {
+    margin: 1.5em auto 0;
+    width: fit-content;
+    background: var(--resetBtn);
+    border: none;
+    padding: .75em 1.5em;
+}
