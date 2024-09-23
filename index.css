@@ -31,6 +31,8 @@ h1 {
 .grid {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+    margin-inline: auto;
+    max-width: 50rem;
     border: .125rem solid white;
 }
 
