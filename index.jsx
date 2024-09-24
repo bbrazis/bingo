@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import Bingo from './components/Bingo/index'
 import data from './data'
+import Nav from './components/Nav/Nav'
 
 function App() {
   
@@ -15,16 +16,9 @@ function App() {
         {Squares}
       </Bingo>
       <button className="reset-btn" onClick={() => location. reload()}>Restart</button>
-      <div className='nav-wrap'>
-        <nav>
-          <ul>
-            <li><a href='/'>Bingo</a></li>
-            <li><a href='./suggestions'>Suggestions</a></li>
-          </ul>
-        </nav>
-      </div>
+      <Nav />
     </>
   )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />); 
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)

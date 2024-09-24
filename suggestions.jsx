@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Nav from './components/Nav/Nav'
+
 
 function App() {
     return (
@@ -11,8 +13,9 @@ function App() {
                 </label>
                 <button type='submit'>Submit</button>
             </form>
+            <Nav />
         </>
     )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />); 
+ReactDOM.createRoot(document.getElementById('root')).render(<App />) 
