@@ -3,6 +3,8 @@ import Bingo from "../components/Bingo"
 import Nav from "../components/Nav/Nav"
 
 export default function Home() {
+    const values = Object.values(data)
+  const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
     return (
         <>
             <h1>Kid Bingo</h1>
