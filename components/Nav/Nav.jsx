@@ -7,7 +7,7 @@ export default function Nav() {
                 <nav>
                     <ul>
                         <li><a href='/'>Bingo</a></li>
-                        <li><a href='./suggestions'>Suggestions</a></li>
+                        <li><a href='../suggestions'>Suggestions</a></li>
                     </ul>
                 </nav>
             </div>
