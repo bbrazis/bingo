@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Nav() {
     return (
@@ -6,8 +7,8 @@ export default function Nav() {
             <div className='nav-wrap'>
                 <nav>
                     <ul>
-                        <li><a href='/'>Bingo</a></li>
-                        <li><a href='../suggestions.html'>Suggestions</a></li>
+                        <li><NavLink to="/">Bingo</NavLink></li>
+                        <li><NavLink to="suggestions" >Suggestions</NavLink></li>
                     </ul>
                 </nav>
             </div>
