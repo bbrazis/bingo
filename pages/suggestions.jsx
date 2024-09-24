@@ -10,7 +10,9 @@ export default function Suggestions() {
     function handleSubmit (e){
         e.preventDefault()
         setStatus('submitting')
-
+        console.log(formData)
+        // send data to api endpoint
+        e.querySelector('#terms').value = ""
     }
 
     function handleChange(e) {
