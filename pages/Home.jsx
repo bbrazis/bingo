@@ -6,7 +6,13 @@ import { getRandomList } from "../data"
 
 export default function Home() {
     const values = Object.values(data)
-    const random = getRandomList()
+    
+    const getRandoms = async () => {
+        const random = await getRandomList()
+        console.log(await random)
+    }
+    getRandoms()
+
     console.log(Object.values(random))
     const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
     return (
