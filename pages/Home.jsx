@@ -5,8 +5,44 @@ import data from "../data"
 import { getRandomList } from "../data"
 
 export default function Home() {
-    const values = async () => await getRandomList()
-    const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
+    // const values = Object.values(data)
+    const [loading, setLoading] = React.useState(false)
+    const [bingoItems, setBingoItems] = React.useState([])
+    
+    React.useEffect(()=> {
+        async function getRandoms () {
+            setLoading(true)
+            try {
+                const random = await getRandomList()
+                const randomArr = Object.values(await random)
+                let newArr = []
+
+                for(let obj of randomArr){
+                    newArr.push(obj.terms)
+                }
+
+                setBingoItems( newArr )
+            } catch (err) {
+                console.error(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+        getRandoms()
+    },[])
+    
+    if(loading) {
+        return (
+            <>
+                <Nav />
+                <h1>Kid Bingo</h1>
+                <p>Loading...</p>
+            </>
+        )
+    }
+    
+    const Squares = bingoItems.map((value,index) => <Bingo.Square key={index} text={value} />)
+
     return (
         <>
             <Nav />
