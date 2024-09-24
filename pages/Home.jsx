@@ -9,8 +9,15 @@ export default function Home() {
     
     const getRandoms = async () => {
         const random = await getRandomList()
-        console.log(Object.values(await random))
+        const randomArr = Object.values(await random)
+        let newArr = []
+
+        for(let obj of randomArr){
+            newArr.push(obj.terms)
+        }
+        return newArr
     }
+    
     getRandoms()
 
     const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
