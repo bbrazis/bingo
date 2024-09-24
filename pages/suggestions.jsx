@@ -5,6 +5,7 @@ import Nav from '../components/Nav/Nav'
 export default function Suggestions() {
     return (
         <>
+            <Nav />
             <h1>Bingo Suggestion Page</h1>
             <form>
                 <label>Bingo Phrase
@@ -12,7 +13,6 @@ export default function Suggestions() {
                 </label>
                 <button type='submit'>Submit</button>
             </form>
-            <Nav />
         </>
     )
 }
