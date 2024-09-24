@@ -25,6 +25,10 @@ export default function Suggestions() {
         <>
             <Nav />
             <h1>Bingo Suggestion Page</h1>
+            {
+                error?.message &&
+                <h2 className='error-message'>{error.message}</h2>
+            }
             <form onSubmit={handleSubmit} className='new-terms-form'>
                 <label>Bingo Phrase
                     <input 
@@ -36,7 +40,13 @@ export default function Suggestions() {
                         value={formData.terms}
                     />
                 </label>
-                <button type='submit'>Submit</button>
+                <button type='submit'>
+                    {
+                        status === 'submitting'
+                            ? "Sending..."
+                            : "Submit"
+                    }
+                </button>
             </form>
         </>
     )
