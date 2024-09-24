@@ -15,6 +15,14 @@ function App() {
         {Squares}
       </Bingo>
       <button className="reset-btn" onClick={() => location. reload()}>Restart</button>
+      <div className='nav-wrap'>
+        <nav>
+          <ul>
+            <li><a href='/'>Bingo</a></li>
+            <li><a href='./suggestions'>Suggestions</a></li>
+          </ul>
+        </nav>
+      </div>
     </>
   )
 }
