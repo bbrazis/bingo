@@ -9,6 +9,10 @@
     --focused: orange;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Inter", system-ui, Arial, Helvetica, sans-serif;
     background: #27292c;
@@ -127,7 +131,7 @@ form.new-terms-form {
 form label {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: flex-start;
     width: 100%;
     font-family: inherit;
@@ -137,6 +141,7 @@ form label {
 form input {
     display: block;
     font-family: inherit;
+    width: 100%;
 }
 
 button[type="submit"] {
