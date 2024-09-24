@@ -8,7 +8,7 @@ export default function Nav() {
                 <nav>
                     <ul>
                         <li><NavLink to="/" className={({isActive}) => isActive ? 'active' : null}>Bingo</NavLink></li>
-                        <li><NavLink to="suggestions" className={({isActive}) => isActive ? 'active' : null}>Suggestions</NavLink></li>
+                        <li><NavLink to="../suggestions" className={({isActive}) => isActive ? 'active' : null}>Suggestions</NavLink></li>
                     </ul>
                 </nav>
             </header>
