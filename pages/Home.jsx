@@ -20,7 +20,7 @@ export default function Home() {
 
     const values = getRandoms()
 
-    const Squares = async () => await values.map((value,index) => <Bingo.Square key={index} text={value} />)
+    const Squares = () => values.map((value,index) => <Bingo.Square key={index} text={value} />)
     return (
         <>
             <Nav />
