@@ -7,10 +7,6 @@ import Home from './pages/Home'
 import Suggestions from './pages/suggestions'
 
 function App() {
-  
-  const values = Object.values(data)
-  const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
-  
   return (
     <BrowserRouter>
       <Routes>
