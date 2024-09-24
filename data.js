@@ -55,7 +55,7 @@ const getRandomList = async () => {
         if(i < 13) {
             newArr.push(values[i])
         } else if (i === 13){
-            newArr.push("FREE SPACE")
+            newArr.push({"terms":"FREE SPACE"})
         } else {
             newArr.push(values[i])
         }
