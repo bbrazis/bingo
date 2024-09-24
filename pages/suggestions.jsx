@@ -1,9 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Nav from './components/Nav/Nav'
+import Nav from '../components/Nav/Nav'
 
 
-function App() {
+export default function Suggestions() {
     return (
         <>
             <h1>Bingo Suggestion Page</h1>
@@ -17,5 +16,3 @@ function App() {
         </>
     )
 }
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />) 
