@@ -13,7 +13,6 @@ export default function Home() {
     }
     getRandoms()
 
-    console.log(Object.values(random))
     const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
     return (
         <>
