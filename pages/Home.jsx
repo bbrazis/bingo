@@ -6,27 +6,49 @@ import { getRandomList } from "../data"
 
 export default function Home() {
     // const values = Object.values(data)
+    const [loading, setLoading] = React.useState(false)
+    const [bingoItems, setBingoItems] = React.useState([])
     
-    const getRandoms = async () => {
-        const random = await getRandomList()
-        const randomArr = Object.values(await random)
-        let newArr = []
+    React.useEffect(()=> {
+        async function getRandoms () {
+            setLoading(true)
+            try {
+                const random = await getRandomList()
+                const randomArr = Object.values(await random)
+                let newArr = []
 
-        for(let obj of randomArr){
-            newArr.push(obj.terms)
+                for(let obj of randomArr){
+                    newArr.push(obj.terms)
+                }
+
+                setBingoItems( newArr )
+            } catch (err) {
+                console.error(err)
+            } finally {
+                setLoading(false)
+            }
         }
-        return newArr
+        getRandoms()
+    },[])
+    
+    if(loading) {
+        return (
+            <>
+                <Nav />
+                <h1>Kid Bingo</h1>
+                <p>Loading...</p>
+            </>
+        )
     }
+    
+    const Squares = bingoItems.map((value,index) => <Bingo.Square key={index} text={value} />)
 
-    const values = getRandoms()
-
-    const Squares = () => values.map((value,index) => <Bingo.Square key={index} text={value} />)
     return (
         <>
             <Nav />
             <h1>Kid Bingo</h1>
             <Bingo>
-                {Squares ? Squares : null}
+                {Squares}
             </Bingo>
             <button className="reset-btn" onClick={() => location. reload()}>Restart</button>
         </>
