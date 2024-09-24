@@ -116,3 +116,29 @@ button {
     border: none;
     padding: .75em 1.5em;
 }
+
+.new-terms-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    font-family: inherit;
+    gap: .5rem;
+}
+
+form input {
+    display: block;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    margin-block-start: 1.5rem;
+    font-family: inherit;
+}
