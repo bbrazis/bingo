@@ -52,9 +52,9 @@ const getRandomList = async () => {
 
     for(let i = 0; i < 25; i++) {
         const values = Object.values(randomList)
-        if(i < 13) {
+        if(i < 12) {
             newArr.push(values[i])
-        } else if (i === 13){
+        } else if (i === 12){
             newArr.push({"terms":"FREE SPACE"})
         } else {
             newArr.push(values[i])
