@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s03q155d4b",
-  "description": "https://v2.scrimba.com/s03q155d4b",
+  "name": "Bingo",
+  "description": "Kid bingo",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -10,6 +10,7 @@
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^6.26.2",
     "vite": "latest"
   },
   "devDependencies": {
