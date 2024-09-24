@@ -20,13 +20,13 @@ export default function Home() {
 
     const values = getRandoms()
 
-    const Squares = values.map((value,index) => <Bingo.Square key={index} text={value} />)
+    const Squares = async () => await values.map((value,index) => <Bingo.Square key={index} text={value} />)
     return (
         <>
             <Nav />
             <h1>Kid Bingo</h1>
             <Bingo>
-                {Squares}
+                {Squares ? Squares : null}
             </Bingo>
             <button className="reset-btn" onClick={() => location. reload()}>Restart</button>
         </>
