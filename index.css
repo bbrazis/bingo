@@ -117,10 +117,11 @@ button {
     padding: .75em 1.5em;
 }
 
-.new-terms-form {
+form.new-terms-form {
     max-width: 400px;
     width: 100%;
     padding: 2rem;
+    margin-inline: auto;
 }
 
 form label {
