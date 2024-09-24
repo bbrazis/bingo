@@ -9,7 +9,7 @@ export default function Home() {
     
     const getRandoms = async () => {
         const random = await getRandomList()
-        console.log(await random)
+        console.log(Object.values(await random))
     }
     getRandoms()
 
