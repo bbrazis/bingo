@@ -1,18 +1,24 @@
 import React from 'react'
 import Nav from '../components/Nav/Nav'
-
+import { sendData, getFullList } from '../data'
 
 export default function Suggestions() {
     const [formData, setFormData] = React.useState({ terms: "" })
     const [status, setStatus] = React.useState('idle')
     const [error, setError] = React.useState(null)
 
-    function handleSubmit (e){
+    async function handleSubmit (e){
         e.preventDefault()
         setStatus('submitting')
-        console.log(formData)
-        // send data to api endpoint
-        e.querySelector('#terms').value = ""
+        try {
+            await sendData(formData)
+            setError(null)
+        } catch(err) {
+            setError(err)
+        } finally {
+            setStatus('idle')
+            e.querySelector('#terms').value = ""
+        }
     }
 
     function handleChange(e) {
