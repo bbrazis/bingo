@@ -28,6 +28,8 @@ main {
     padding: 0 1rem 2rem
 }
 
+ul { list-style: none; margin: 0; padding: 0;}
+
 header {
     position: sticky;
     top: 0;
@@ -36,9 +38,6 @@ header {
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     column-gap: .25rem;
@@ -153,4 +152,21 @@ form input {
 
 button[type="submit"] {
     margin-block-start: 1.5rem;
+}
+
+.list-wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.list-wrap ul {
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(min-content, max-content));
+    gap: .25rem;
+}
+
+.list-wrap li {
+    padding: .25rem;
 }
