@@ -44,6 +44,7 @@ export default function Suggestions() {
                 setLoading(false)
             }
         }
+        getList()
     },[])
 
     const ListEls = list.map((item, index) => (
