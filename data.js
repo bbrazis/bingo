@@ -64,13 +64,13 @@ const getRandomList = async () => {
     return newArr
 }
 
-const sendData = async (data) => {
+const sendData = async (formData) => {
     const postOptions = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(formData)
     }
     
     const res = await fetch(`https://x8ki-letl-twmt.n7.xano.io/api:OJ5FJ_Jw/bingo`, postOptions)
