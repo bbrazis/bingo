@@ -72,12 +72,19 @@ const sendData = async (data) => {
         },
         body: JSON.stringify(data)
     }
-    try {
-        const res = await fetch(`https://x8ki-letl-twmt.n7.xano.io/api:OJ5FJ_Jw/bingo`, postOptions)
-        const data = await res.json()
-    } catch (err) {
-        console.error(err)
+    
+    const res = await fetch(`https://x8ki-letl-twmt.n7.xano.io/api:OJ5FJ_Jw/bingo`, postOptions)
+    const data = await res.json()
+
+    if(!res.ok) {
+        throw {
+            message: "There was a problem submitting your suggestion",
+            statusText: res.statusText,
+            status: res.status
+        }
     }
+
+    return `'${data.terms}' was successfully added!`
 }
 
 export default options
