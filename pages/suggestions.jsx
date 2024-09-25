@@ -60,6 +60,7 @@ export default function Suggestions() {
                 <h2 className='error-message'>{error.message}</h2>
             }
             <form onSubmit={handleSubmit} className='new-terms-form'>
+                <h2>Insert your new Bingo terms</h2>
                 <label>Bingo Phrase
                     <input 
                         name='terms'
@@ -81,6 +82,7 @@ export default function Suggestions() {
             {
                 !loading &&
                 <div className='list-wrap'>
+                    <h2>Full List of Terms</h2>
                     <ul className='list'>
                         {ListEls}
                     </ul>
