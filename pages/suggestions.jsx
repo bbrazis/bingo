@@ -22,7 +22,7 @@ export default function Suggestions() {
             }
         }
         getList()
-    },[list])
+    },[])
 
     async function handleSubmit (e){
         e.preventDefault()
