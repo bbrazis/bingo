@@ -82,4 +82,4 @@ const sendData = async (data) => {
 
 export default options
 
-export { getFullList, getRandomList }
+export { getFullList, getRandomList, sendData }
