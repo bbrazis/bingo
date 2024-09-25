@@ -36,7 +36,8 @@ export default function Suggestions() {
             setLoading(true)
             try {
                 const data = await getFullList()
-                setList(Object.values(data))
+                setList(Object.values(await data))
+                console.log(list)
             } catch(err) {
                 setError(err)
             } finally {
