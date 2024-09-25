@@ -35,6 +35,7 @@ header {
     top: 0;
     padding: .5rem 1rem;
     margin-block-end: 2rem;
+    background: var(--background);
 }
 
 nav ul {
