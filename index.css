@@ -160,10 +160,9 @@ button[type="submit"] {
     margin: 2rem auto 0;
 }
 
-.list-wrap summary {
-    display: flex;
-    gap: 1rem;
-}
+/* .list-wrap summary {
+    
+} */
 
 summary h2 {
     margin: unset;
