@@ -83,12 +83,14 @@ export default function Suggestions() {
             </form>
             {
                 !loading &&
-                <div className='list-wrap'>
-                    <h2>Full List of Bingo Items</h2>
+                <details className='list-wrap'>
+                    <summary>
+                        <h2>Full List of Bingo Items</h2>
+                    </summary>
                     <ul className='list'>
                         {ListEls}
                     </ul>
-                </div>
+                </details>
             }
         </>
     )
