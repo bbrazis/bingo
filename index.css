@@ -125,6 +125,8 @@ form.new-terms-form {
     max-width: 400px;
     width: 100%;
     padding: 2rem;
+    background: var(--boxColor);
+    color: var(--boxText);
     margin-inline: auto;
 }
 
@@ -142,6 +144,7 @@ form input {
     display: block;
     font-family: inherit;
     width: 100%;
+    padding: .25rem;
 }
 
 button[type="submit"] {
