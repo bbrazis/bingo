@@ -85,7 +85,7 @@ export default function Suggestions() {
                 !loading &&
                 <details className='list-wrap'>
                     <summary>
-                        <h2>Full List of Bingo Items</h2>
+                        Full List of Bingo Items
                     </summary>
                     <ul className='list'>
                         {ListEls}
