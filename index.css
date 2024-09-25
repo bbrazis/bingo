@@ -156,10 +156,17 @@ button[type="submit"] {
 }
 
 .list-wrap {
-    display: flex;
-    flex-direction: column;
     max-width: 400px;
-    margin-inline: auto;
+    margin: 2rem auto 0;
+}
+
+.list-wrap summary {
+    display: flex;
+    gap: 1rem;
+}
+
+summary h2 {
+    margin: unset;
 }
 
 .list-wrap ul {
