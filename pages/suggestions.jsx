@@ -22,7 +22,7 @@ export default function Suggestions() {
             }
         }
         getList()
-    },[])
+    },[list])
 
     async function handleSubmit (e){
         e.preventDefault()
@@ -33,6 +33,9 @@ export default function Suggestions() {
         } catch(err) {
             setError(err)
         } finally {
+            setList(prev => {
+                [...prev, formData]
+            })
             setFormData({ terms: ""})
             setStatus('idle')
         }
