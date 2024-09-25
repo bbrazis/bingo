@@ -63,6 +63,23 @@ const getRandomList = async () => {
 
     return newArr
 }
+
+const sendData = async (data) => {
+    const postOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+    try {
+        const res = await fetch(`https://x8ki-letl-twmt.n7.xano.io/api:OJ5FJ_Jw/bingo`, postOptions)
+        const data = await res.json()
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 export default options
 
 export { getFullList, getRandomList }
