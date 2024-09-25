@@ -9,6 +9,21 @@ export default function Suggestions() {
     const [list, setList] = React.useState([])
     const [error, setError] = React.useState(null)
 
+    React.useEffect(() => {
+        async function getList() {
+            setLoading(true)
+            try {
+                const data = await getFullList()
+                setList(Object.values(await data))
+            } catch(err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+        getList()
+    },[])
+
     async function handleSubmit (e){
         e.preventDefault()
         setStatus('submitting')
@@ -18,8 +33,8 @@ export default function Suggestions() {
         } catch(err) {
             setError(err)
         } finally {
+            setFormData({ terms: ""})
             setStatus('idle')
-            e.querySelector('#terms').value = ""
         }
     }
 
@@ -30,22 +45,6 @@ export default function Suggestions() {
             [name]: value
         }))
     }
-
-    React.useEffect(() => {
-        async function getList() {
-            setLoading(true)
-            try {
-                const data = await getFullList()
-                setList(Object.values(await data))
-                console.log(list)
-            } catch(err) {
-                setError(err)
-            } finally {
-                setLoading(false)
-            }
-        }
-        getList()
-    },[])
 
     const ListEls = list.map((item, index) => (
         <li className='items' key={index}>{item.terms}</li>
