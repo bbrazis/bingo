@@ -57,7 +57,6 @@ const getRandomList = async () => {
             "terms": values[i].terms,
             "checked": false
         }
-        console.log(current)
         if(i < 12) {
             newArr.push(current)
         } else if (i === 12){
