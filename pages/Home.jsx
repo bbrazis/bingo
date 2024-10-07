@@ -32,7 +32,6 @@ export default function Home() {
     },[])
     
     function toggleSquare(index){
-        console.log(index)
         const mappedArr = bingoItems.map((item, i) => {
             if(i === index) {
                 return {
@@ -55,8 +54,6 @@ export default function Home() {
             </>
         )
     }
-    
-    // const Squares = 
 
     return (
         <>
