@@ -43,7 +43,7 @@ export default function Home() {
                 return item
             }
         })
-        console.log(mappedArr)
+        setBingoItems(mappedArr)
     }
 
     if(loading) {
