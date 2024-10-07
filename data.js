@@ -49,7 +49,7 @@ const getRandomList = async () => {
     const data = await getFullList()
     const randomList = await shuffle(data)
     let newArr = []
-
+    console.log(values)
     for(let i = 0; i < 25; i++) {
         const values = Object.values(randomList)
         console.log(values)
