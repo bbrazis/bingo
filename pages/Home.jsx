@@ -37,7 +37,7 @@ export default function Home() {
             if(i === index) {
                 return {
                     "terms": item.terms,
-                    "checked": true
+                    "checked": !item.checked
                 }
             } else {
                 return item
