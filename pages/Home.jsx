@@ -29,13 +29,15 @@ export default function Home() {
             }
         }
         getRandoms()
-        console.log(bingoItems)
     },[])
     
     function toggleSquare(e){
         const text = e.target.querySelector("p").textContent
-        console.log(text)
-        // const current = bingoItems.filter(item => item.terms === e.t)
+        const current = bingoItems.filter(item => item.terms === text)
+        console.log(current)
+        // setBingoItems(prev => {
+            
+        // })
     }
 
     if(loading) {
