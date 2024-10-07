@@ -52,7 +52,6 @@ const getRandomList = async () => {
     let newArr = []
 
     for(let i = 0; i < 25; i++) {
-        // console.log(values)
         const current = {
             "terms": values[i].terms,
             "checked": false
