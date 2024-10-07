@@ -31,9 +31,10 @@ export default function Home() {
         getRandoms()
     },[])
     
-    function toggleSquare(e){
+    function toggleSquare(e, index){
         const text = e.target.querySelector("p").textContent
-        // const mappedArr = bingoItems.map((item, index) => {
+        console.log(index)
+        // const mappedArr = bingoItems.map((item, i) => {
         //     if()
         // })
         const current = bingoItems.filter(item => item.terms === text)[0]
@@ -63,7 +64,7 @@ export default function Home() {
                             key={index}
                             text={value.terms}
                             checked={value.checked}
-                            toggleSquare={toggleSquare}
+                            toggleSquare={()=>toggleSquare(index)}
                         />)
                     )}
             </Bingo>
