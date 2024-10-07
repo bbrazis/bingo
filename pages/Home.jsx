@@ -31,16 +31,19 @@ export default function Home() {
         getRandoms()
     },[])
     
-    function toggleSquare(e, index){
+    function toggleSquare(index){
         console.log(e, index)
-        const text = e.target.querySelector("p").textContent
-        
-        // const mappedArr = bingoItems.map((item, i) => {
-        //     if()
-        // })
-        const current = bingoItems.filter(item => item.terms === text)[0]
-        console.log(current)
-        
+        const mappedArr = bingoItems.map((item, i) => {
+            if(i === index) {
+                return {
+                    "terms": item.terms,
+                    "checked": true
+                }
+            } else {
+                return item
+            }
+        })
+        console.log(mappedArr)
     }
 
     if(loading) {
@@ -65,7 +68,7 @@ export default function Home() {
                             key={index}
                             text={value.terms}
                             checked={value.checked}
-                            toggleSquare={()=>toggleSquare(e, index)}
+                            toggleSquare={()=>toggleSquare(index)}
                         />)
                     )}
             </Bingo>
