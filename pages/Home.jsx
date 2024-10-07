@@ -29,6 +29,7 @@ export default function Home() {
             }
         }
         getRandoms()
+        console.log(bingoItems)
     },[])
     
     if(loading) {
