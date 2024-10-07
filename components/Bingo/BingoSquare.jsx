@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BingoSquare({text, checked}){
+export default function BingoSquare({text, checked, toggleSquare}){
     // const [selected, setSelected] = React.useState(false)
     
     // function toggleSquare(){
