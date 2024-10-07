@@ -33,11 +33,9 @@ export default function Home() {
     
     function toggleSquare(e){
         const text = e.target.querySelector("p").textContent
-        const current = bingoItems.filter(item => item.terms === text)
+        const current = bingoItems.filter(item => item.terms === text)[0]
         console.log(current)
-        // setBingoItems(prev => {
-            
-        // })
+        
     }
 
     if(loading) {
