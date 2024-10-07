@@ -33,6 +33,9 @@ export default function Home() {
     
     function toggleSquare(e){
         const text = e.target.querySelector("p").textContent
+        // const mappedArr = bingoItems.map((item, index) => {
+        //     if()
+        // })
         const current = bingoItems.filter(item => item.terms === text)[0]
         console.log(current)
         
@@ -48,14 +51,21 @@ export default function Home() {
         )
     }
     
-    const Squares = bingoItems.map((value,index) => <Bingo.Square key={index} text={value.terms} checked={value.checked} toggleSquare={toggleSquare} />)
+    // const Squares = 
 
     return (
         <>
             <Nav />
             <h1>Kid Bingo</h1>
             <Bingo>
-                {Squares}
+                {bingoItems.map((value,index) => (
+                        <Bingo.Square 
+                            key={index}
+                            text={value.terms}
+                            checked={value.checked}
+                            toggleSquare={toggleSquare}
+                        />)
+                    )}
             </Bingo>
             <button className="reset-btn" onClick={() => location. reload()}>Restart</button>
         </>
