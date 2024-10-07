@@ -18,7 +18,7 @@ export default function Home() {
                 let newArr = []
 
                 for(let obj of randomArr){
-                    newArr.push(obj.terms)
+                    newArr.push(obj)
                 }
 
                 setBingoItems( newArr )
@@ -41,7 +41,7 @@ export default function Home() {
         )
     }
     
-    const Squares = bingoItems.map((value,index) => <Bingo.Square key={index} text={value} />)
+    const Squares = bingoItems.map((value,index) => <Bingo.Square key={index} text={value.terms} checked={value.checked} />)
 
     return (
         <>
