@@ -48,17 +48,22 @@ const getFullList = async () => {
 const getRandomList = async () => {
     const data = await getFullList()
     const randomList = await shuffle(data)
+    const values = Object.values(randomList)
     let newArr = []
 
     for(let i = 0; i < 25; i++) {
-        const values = Object.values(randomList)
-        console.log(values)
+        // console.log(values)
+        const current = {
+            "terms": values[i].terms,
+            "checked": false
+        }
+        console.log(current)
         if(i < 12) {
-            newArr.push(values[i])
+            newArr.push(current)
         } else if (i === 12){
             newArr.push({ "terms":"FREE SPACE","checked":false })
         } else {
-            newArr.push(values[i])
+            newArr.push(current)
         }
     }
 
