@@ -1,6 +1,7 @@
 import React from "react"
 import Bingo from "../components/Bingo"
 import Nav from "../components/Nav/Nav"
+import winConditions from "../data"
 import { getRandomList } from "../data"
 
 export default function Home() {
