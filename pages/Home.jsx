@@ -9,25 +9,26 @@ export default function Home() {
     const [loading, setLoading] = React.useState(false)
     const [bingoItems, setBingoItems] = React.useState([])
     
-    React.useEffect(()=> {
-        async function getRandoms () {
-            setLoading(true)
-            try {
-                const random = await getRandomList()
-                const randomArr = Object.values(await random)
-                let newArr = []
+    async function getRandoms () {
+        setLoading(true)
+        try {
+            const random = await getRandomList()
+            const randomArr = Object.values(await random)
+            let newArr = []
 
-                for(let obj of randomArr){
-                    newArr.push(obj)
-                }
-
-                setBingoItems( newArr )
-            } catch (err) {
-                console.error(err)
-            } finally {
-                setLoading(false)
+            for(let obj of randomArr){
+                newArr.push(obj)
             }
+
+            setBingoItems( newArr )
+        } catch (err) {
+            console.error(err)
+        } finally {
+            setLoading(false)
         }
+    }
+
+    React.useEffect(()=> {
         getRandoms()
     },[])
     
@@ -69,7 +70,7 @@ export default function Home() {
                         />)
                     )}
             </Bingo>
-            <button className="reset-btn" onClick={() => location. reload()}>Restart</button>
+            <button className="reset-btn" onClick={getRandoms}>Restart</button>
         </>
     )
 }
