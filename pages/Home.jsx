@@ -47,7 +47,7 @@ export default function Home() {
                 if(boxIds.includes(!index)){
                     setBoxIds(prev => [...prev, index])
                 } else {
-                    setBoxIds(prev => prev.map(item != index))
+                    setBoxIds(prev => prev.map(id => id != index))
                 }
                 return {
                     "terms": item.terms,
