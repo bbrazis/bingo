@@ -45,7 +45,9 @@ export default function Home() {
         const mappedArr = bingoItems.map((item, i) => {
             if(i === index) {
                 if(boxIds.includes(index)){
-                    setBoxIds(prev => prev.map(id => id != index))
+                    console.log('already exists, need to remove')
+                    const newMap = boxIds.map(id => id != index)
+                    console.log(newMap)
                 } else {
                     setBoxIds(prev => [...prev, index])
                 }
