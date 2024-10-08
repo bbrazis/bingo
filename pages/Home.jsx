@@ -44,10 +44,10 @@ export default function Home() {
     function toggleSquare(index){
         const mappedArr = bingoItems.map((item, i) => {
             if(i === index) {
-                if(boxIds.includes(!index)){
-                    setBoxIds(prev => [...prev, index])
+                if(boxIds.includes(!i)){
+                    setBoxIds(prev => [...prev, i])
                 } else {
-                    setBoxIds(prev => prev.map(id => id != index))
+                    setBoxIds(prev => prev.map(id => id != i))
                 }
                 return {
                     "terms": item.terms,
