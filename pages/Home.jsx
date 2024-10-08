@@ -49,7 +49,7 @@ export default function Home() {
                     const newMap = boxIds.map(id => {
                         if(id != index) return id
                     })
-                    console.log(newMap)
+                    setBoxIds(newMap)
                 } else {
                     setBoxIds(prev => [...prev, index])
                 }
