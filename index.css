@@ -76,7 +76,7 @@ h1 {
     align-items: center;
     background-color: var(--boxColor);
     position: relative;
-    font-size: clamp(.5rem, calc(.05rem + 2.1vw), 1.5rem);
+    font-size: clamp(.5rem, calc(.05rem + 1.5vw), 1.35rem);
     padding: .125em;
     font-weight: 600;
     outline-color: var(--focused);
