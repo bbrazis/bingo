@@ -8,7 +8,20 @@ export default function Home() {
     // const values = Object.values(data)
     const [loading, setLoading] = React.useState(false)
     const [bingoItems, setBingoItems] = React.useState([])
+    const [boxIds, setBoxIds] = React.useState([])
+    const [winning, setWinning] = React.useState(false)
     
+    React.useEffect(()=> {
+        getRandoms()
+    },[])
+
+    React.useEffect(()=>{
+        console.log(boxIds)
+        if(boxIds.length >= 5){
+            console.log('potential win condition')
+        }
+    },[boxIds])
+
     async function getRandoms () {
         setLoading(true)
         try {
@@ -28,13 +41,14 @@ export default function Home() {
         }
     }
 
-    React.useEffect(()=> {
-        getRandoms()
-    },[])
-    
     function toggleSquare(index){
         const mappedArr = bingoItems.map((item, i) => {
             if(i === index) {
+                if(boxIds.includes(!index)){
+                    setBoxIds(prev => [...prev, index])
+                } else {
+                    setBoxIds(prev => prev.map(item != index))
+                }
                 return {
                     "terms": item.terms,
                     "checked": !item.checked
