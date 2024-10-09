@@ -16,9 +16,7 @@ export default function Home() {
     },[])
 
     React.useEffect(()=>{
-        console.log(boxIds)
         if(boxIds.length >= 5){
-            console.log('potential win condition')
             for(const arr of winConditions){
                 if(compare(arr, boxIds)){
                     setWinning(true)
