@@ -68,6 +68,24 @@ h1 {
     position: relative;
 }
 
+.win-wrapper {
+    position: absolute;
+    z-index: 2;
+    background: hsl(from var(--background) h s 40);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.win-wrapper h2 {
+    margin: 0 0 1em;
+}
+
+.win-wrapper p {
+    margin: unset;
+}
+
 .square {
     aspect-ratio: 1;
     border: .125rem solid white;
