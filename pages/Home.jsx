@@ -63,7 +63,7 @@ export default function Home() {
     }
 
     function reset(){
-        setBingoItems([])
+        setBoxIds([])
         setWinning(false)
     }
 
