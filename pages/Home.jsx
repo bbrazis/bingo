@@ -21,7 +21,7 @@ export default function Home() {
             console.log('potential win condition')
             for(const arr of winConditions){
                 if(compare(arr, boxIds)){
-                    console.log('you win!')
+                    setWinning(true)
                     break
                 }
             }
