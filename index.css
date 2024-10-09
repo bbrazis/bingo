@@ -81,6 +81,7 @@ h1 {
 
 .win-wrapper h2 {
     margin: 0 0 1em;
+    font-size: clamp(1.5rem, calc(.05rem + 3vw), 2.5rem);
 }
 
 .win-wrapper p {
