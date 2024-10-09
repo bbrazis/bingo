@@ -2,7 +2,7 @@ import React from "react"
 import Bingo from "../components/Bingo"
 import Nav from "../components/Nav/Nav"
 import winConditions from "../data"
-import { getRandomList } from "../data"
+import { getRandomList, taunts } from "../data"
 
 export default function Home() {
     // const values = Object.values(data)
@@ -10,9 +10,11 @@ export default function Home() {
     const [bingoItems, setBingoItems] = React.useState([])
     const [boxIds, setBoxIds] = React.useState([])
     const [winning, setWinning] = React.useState(false)
+    const [taunt, setTaunt] = React.useState('')
     
     React.useEffect(()=> {
         getRandoms()
+        newTaunt()
     },[])
 
     React.useEffect(()=>{
@@ -63,6 +65,7 @@ export default function Home() {
     function reset(){
         setBoxIds([])
         setWinning(false)
+        newTaunt()
     }
 
     function toggleSquare(index){
@@ -83,6 +86,11 @@ export default function Home() {
             }
         })
         setBingoItems(mappedArr)
+    }
+
+    function newTaunt() {
+        const num = Math.floor(Math.random * taunts.length)
+        setTaunt(taunts[num])
     }
 
     if(loading) {
