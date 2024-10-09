@@ -66,6 +66,7 @@ h1 {
     max-width: 50rem;
     border: .125rem solid white;
     position: relative;
+    font-size: clamp(.5rem, calc(.05rem + 1.5vw), 1.35rem);
 }
 
 .win-wrapper {
@@ -86,6 +87,7 @@ h1 {
 
 .win-wrapper p {
     margin: unset;
+    font-size: inherit;
 }
 
 .square {
@@ -97,7 +99,7 @@ h1 {
     align-items: center;
     background-color: var(--boxColor);
     position: relative;
-    font-size: clamp(.5rem, calc(.05rem + 1.5vw), 1.35rem);
+    font-size: inherit;
     padding: .125em;
     font-weight: 600;
     outline-color: var(--focused);
