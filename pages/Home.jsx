@@ -23,8 +23,6 @@ export default function Home() {
                 if(compare(arr, boxIds)){
                     setWinning(true)
                     break
-                } else {
-                    setWinning(false)
                 }
             }
         }
@@ -56,12 +54,17 @@ export default function Home() {
             }
 
             setBingoItems( newArr )
-            setWinning(false)
+            reset()
         } catch (err) {
             console.error(err)
         } finally {
             setLoading(false)
         }
+    }
+
+    function reset(){
+        setBingoItems([])
+        setWinning(false)
     }
 
     function toggleSquare(index){
