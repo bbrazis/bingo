@@ -13,6 +13,15 @@ const winConditions = [
     [20,16,12,8,4]
 ]
 
+const taunts = [
+    "My condolences",
+    "Whomp whomp",
+    "Big oof",
+    "I'm sorry for what you've endured",
+    "At least it'll end soon... right?",
+    "Hopefully its time to go home"
+]
+
 const shuffle = (arr) => {
     return arr.map(value => ({value, sort: Math.random( )}))
         .sort((a, b) => a.sort - b.sort)
@@ -79,4 +88,4 @@ const sendData = async (formData) => {
 
 export default winConditions
 
-export { getFullList, getRandomList, sendData }
+export { getFullList, getRandomList, sendData, taunts }
