@@ -23,6 +23,8 @@ export default function Home() {
                 if(compare(arr, boxIds)){
                     setWinning(true)
                     break
+                } else {
+                    setWinning(false)
                 }
             }
         }
