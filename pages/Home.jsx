@@ -32,7 +32,8 @@ export default function Home() {
 
     function compare(arr1, arr2){
         for(const value of arr1){
-            return arr2.includes(value)
+            if(!arr2.includes(value)) break
+            else return true
         }
     }
 
