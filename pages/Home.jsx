@@ -119,7 +119,7 @@ export default function Home() {
                 {winning && (
                     <div className="win-wrapper">
                         <h2>Looks like you won!</h2>
-                        <p>I'm sorry you had to endure that.</p>
+                        <p>{taunt}</p>
                     </div>
                 )}
             </Bingo>
