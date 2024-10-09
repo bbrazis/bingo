@@ -46,10 +46,8 @@ export default function Home() {
             if(i === index) {
                 if(boxIds.includes(index)){
                     console.log('already exists, need to remove')
-                    const newMap = boxIds.map(id => {
-                        if(id != index) return id
-                    })
-                    setBoxIds(newMap)
+                    const filtered = boxIds.filter(id => id != index)
+                    console.log(filtered)
                 } else {
                     setBoxIds(prev => [...prev, index])
                 }
