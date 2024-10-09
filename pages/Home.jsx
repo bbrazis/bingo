@@ -97,13 +97,19 @@ export default function Home() {
             <h1>Kid Bingo</h1>
             <Bingo>
                 {bingoItems.map((value,index) => (
-                        <Bingo.Square 
-                            key={index}
-                            text={value.terms}
-                            checked={value.checked}
-                            toggleSquare={()=>toggleSquare(index)}
-                        />)
-                    )}
+                    <Bingo.Square 
+                        key={index}
+                        text={value.terms}
+                        checked={value.checked}
+                        toggleSquare={()=>toggleSquare(index)}
+                    />)
+                )}
+                {winning && (
+                    <div className="win-wrapper">
+                        <h2>Looks like you won!</h2>
+                        <p>I'm sorry you had to endure that.</p>
+                    </div>
+                )}
             </Bingo>
             <button className="reset-btn" onClick={getRandoms}>Restart</button>
         </>
