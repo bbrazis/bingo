@@ -70,6 +70,7 @@ h1 {
 
 .win-wrapper {
     position: absolute;
+    inset: 0;
     z-index: 2;
     background: hsl(from var(--background) h s 40);
     display: flex;
