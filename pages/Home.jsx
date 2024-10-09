@@ -23,17 +23,22 @@ export default function Home() {
                 if(compare(arr, boxIds)){
                     console.log('you win!')
                     break
-                } else {
-                    console.log('keep trying')
                 }
             }
         }
     },[boxIds])
 
     function compare(arr1, arr2){
+        let matches = []
         for(const value of arr1){
-            if(!arr2.includes(value)) break
-            else return true
+            if(arr2.includes(value)) {
+                matches.push(true)
+            }
+        }
+        if(matches.length === 5) {
+            return true
+        } else {
+            return false
         }
     }
 
