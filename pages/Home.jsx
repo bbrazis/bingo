@@ -90,7 +90,8 @@ export default function Home() {
 
     function newTaunt() {
         const num = Math.floor(Math.random * taunts.length)
-        setTaunt(taunts[num])
+        const text = taunts[num]
+        setTaunt(text)
     }
 
     if(loading) {
