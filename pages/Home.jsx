@@ -20,7 +20,12 @@ export default function Home() {
         if(boxIds.length >= 5){
             console.log('potential win condition')
             for(const arr of winConditions){
-                console.log(compare(arr, boxIds))
+                if(compare(arr, boxIds)){
+                    console.log('you win!')
+                    break
+                } else {
+                    console.log('keep trying')
+                }
             }
         }
     },[boxIds])
