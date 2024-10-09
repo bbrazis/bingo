@@ -19,8 +19,17 @@ export default function Home() {
         console.log(boxIds)
         if(boxIds.length >= 5){
             console.log('potential win condition')
+            for(const arr of winConditions){
+                console.log(compare(arr, boxIds))
+            }
         }
     },[boxIds])
+
+    function compare(arr1, arr2){
+        for(const value of arr1){
+            return arr2.includes(value)
+        }
+    }
 
     async function getRandoms () {
         setLoading(true)
