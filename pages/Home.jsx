@@ -56,6 +56,7 @@ export default function Home() {
             }
 
             setBingoItems( newArr )
+            setWinning(false)
         } catch (err) {
             console.error(err)
         } finally {
