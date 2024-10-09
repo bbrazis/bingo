@@ -91,7 +91,7 @@ export default function Home() {
     function newTaunt() {
         const num = Math.floor(Math.random * taunts.length)
         const text = taunts[num]
-        console.log(text)
+        console.log(text, num)
         setTaunt(text)
     }
 
