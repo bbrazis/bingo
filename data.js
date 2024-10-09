@@ -19,7 +19,8 @@ const taunts = [
     "Big oof",
     "I'm sorry for what you've endured",
     "At least it'll end soon... right?",
-    "Hopefully its time to go home"
+    "Hopefully its time to go home",
+    "Big whoop"
 ]
 
 const shuffle = (arr) => {
