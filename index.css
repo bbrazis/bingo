@@ -65,6 +65,7 @@ h1 {
     margin-inline: auto;
     max-width: 50rem;
     border: .125rem solid white;
+    position: relative;
 }
 
 .square {
