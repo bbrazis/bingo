@@ -12,4 +12,4 @@ function BingoSquare({text, checked, toggleSquare}){
     )
 }
 
-export default memo(BingoSquare)
+export default React.memo(BingoSquare)
