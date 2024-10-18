@@ -24,11 +24,11 @@ export default function Suggestions() {
         getList()
     },[])
 
-    async function handleSubmit (e){
+    function handleSubmit (e){
         e.preventDefault()
         setStatus('submitting')
         try {
-            await sendData(formData)
+            sendData(formData)
             setError(null)
         } catch(err) {
             setError(err)
