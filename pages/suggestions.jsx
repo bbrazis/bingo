@@ -53,10 +53,6 @@ export default function Suggestions() {
         }))
     }
 
-    const ListEls = list?.map((item, index) => (
-        <li className='items' key={index}>{item.terms}</li>
-    ))
-
     return (
         <>
             <Nav />
@@ -92,7 +88,9 @@ export default function Suggestions() {
                         Full List of Bingo Items
                     </summary>
                     <ul className='list'>
-                        {ListEls}
+                        {list?.map((item, index) => (
+                            <li className='items' key={index}>{item.terms}</li>
+                        ))}
                     </ul>
                 </details>
             }
