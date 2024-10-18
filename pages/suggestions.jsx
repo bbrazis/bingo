@@ -53,7 +53,7 @@ export default function Suggestions() {
         }))
     }
 
-    const ListEls = list.map((item, index) => (
+    const ListEls = list?.map((item, index) => (
         <li className='items' key={index}>{item.terms}</li>
     ))
 
