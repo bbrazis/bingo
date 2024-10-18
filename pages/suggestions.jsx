@@ -8,22 +8,22 @@ export default function Suggestions() {
     const [loading, setLoading] = React.useState(false)
     const [list, setList] = React.useState([])
     const [error, setError] = React.useState(null)
-    const [counter, setCounter] = React.useState(0)
 
     React.useEffect(() => {
-        async function getList() {
-            setLoading(true)
-            try {
-                const data = await getFullList()
-                setList(Object.values(await data))
-            } catch(err) {
-                setError(err)
-            } finally {
-                setLoading(false)
-            }
-        }
         getList()
-    },[counter])
+    },[])
+    
+    async function getList() {
+        setLoading(true)
+        try {
+            const data = await getFullList()
+            setList(Object.values(await data))
+        } catch(err) {
+            setError(err)
+        } finally {
+            setLoading(false)
+        }
+    }
 
     function handleSubmit (e){
         e.preventDefault()
@@ -40,7 +40,7 @@ export default function Suggestions() {
                 })
                 setFormData({ terms: ""})
                 setStatus('idle')
-                setCounter(prev => prev + 1)
+                getList()
             }
         }
     }
