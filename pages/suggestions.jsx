@@ -8,6 +8,7 @@ export default function Suggestions() {
     const [loading, setLoading] = React.useState(false)
     const [list, setList] = React.useState([])
     const [error, setError] = React.useState(null)
+    const [counter, setCounter] = React.useState(0)
 
     React.useEffect(() => {
         async function getList() {
@@ -22,7 +23,7 @@ export default function Suggestions() {
             }
         }
         getList()
-    },[])
+    },[counter])
 
     function handleSubmit (e){
         e.preventDefault()
@@ -38,6 +39,7 @@ export default function Suggestions() {
             })
             setFormData({ terms: ""})
             setStatus('idle')
+            setCounter(prev => prev + 1)
         }
     }
 
