@@ -86,7 +86,7 @@ export default function Suggestions() {
                 </button>
             </form>
             {
-                !loading &&
+                !loading && list &&
                 <details className='list-wrap'>
                     <summary>
                         Full List of Bingo Items
