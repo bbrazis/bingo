@@ -25,7 +25,7 @@ export default function Suggestions() {
         }
     }
 
-    function handleSubmit (e){
+    async function handleSubmit (e){
         e.preventDefault()
         if(formData.terms.length > 0){
             setStatus('submitting')
@@ -40,7 +40,7 @@ export default function Suggestions() {
                 })
                 setFormData({ terms: ""})
                 setStatus('idle')
-                getList()
+                await getList()
             }
         }
     }
