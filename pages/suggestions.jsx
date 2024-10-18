@@ -27,19 +27,21 @@ export default function Suggestions() {
 
     function handleSubmit (e){
         e.preventDefault()
-        setStatus('submitting')
-        try {
-            sendData(formData)
-            setError(null)
-        } catch(err) {
-            setError(err)
-        } finally {
-            setList(prev => {
-                [...prev, formData]
-            })
-            setFormData({ terms: ""})
-            setStatus('idle')
-            setCounter(prev => prev + 1)
+        if(formData.terms.length > 0){
+            setStatus('submitting')
+            try {
+                sendData(formData)
+                setError(null)
+            } catch(err) {
+                setError(err)
+            } finally {
+                setList(prev => {
+                    [...prev, formData]
+                })
+                setFormData({ terms: ""})
+                setStatus('idle')
+                setCounter(prev => prev + 1)
+            }
         }
     }
 
